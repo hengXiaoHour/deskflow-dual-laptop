@@ -74,9 +74,8 @@ Edit `~/.config/Deskflow/deskflow-server.conf`, then
 
 | Option | Meaning |
 |---|---|
-| `switchDelay = 300` **and** `switchNeedsShift = true` | **default**: hold **Shift** and dwell ~300ms at the edge — both required; grazes and keyless pushes never cross |
-| `switchDelay = 300` alone | dwell-only variant (`0` = instant slam); note a very hard slam can cross instantly on some input stacks |
-| `switchNeedsShift = true` alone | Shift-gated instant crossing (can be unreliable under some input stacks) |
+| `switchDelay = 300` | **default**: hold the cursor at the edge ~300ms to switch; a quick graze won't trigger (`0` = instant). Note: a very hard slam can cross instantly on some input stacks |
+| `switchNeedsShift` etc. | ⚠ non-functional on GNOME Wayland/libei: modifier polling returns empty state, so the gate never engages (verified empirically + in source). Works on X11 |
 | `switchDoubleTap` | not recommended: requires exiting the tap zone between taps; unreliable in practice |
 | `switchNeedsControl` / `switchNeedsAlt` | same gate idea as Shift, different modifier |
 | `switchCorners` / `switchCornerSize` | dead-zone screen corners so they never trigger |
