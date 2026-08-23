@@ -74,8 +74,8 @@ Edit `~/.config/Deskflow/deskflow-server.conf`, then
 
 | Option | Meaning |
 |---|---|
-| `switchNeedsShift = true` | **default**: crossing only happens while holding **Shift** and pushing into the edge — zero accidental switches |
-| `switchDelay = 300` | alternative: dwell at the edge this many ms before switching (`0` = instant slam) |
+| `switchDelay = 300` | **default**: dwell at the edge ~300ms to switch; a quick graze won't trigger it (`0` = instant slam) |
+| `switchNeedsShift = true` | alternative: cross only while holding **Shift** at the edge (gate can be unreliable under some input stacks) |
 | `switchDoubleTap` | not recommended: requires exiting the tap zone between taps; unreliable in practice |
 | `switchNeedsControl` / `switchNeedsAlt` | same gate idea as Shift, different modifier |
 | `switchCorners` / `switchCornerSize` | dead-zone screen corners so they never trigger |

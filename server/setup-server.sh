@@ -62,7 +62,7 @@ esac
   echo ""
   echo "section: options"
   printf '\tkeystroke(super+a) = lockCursorToScreen(toggle)\n'
-  printf '\tswitchNeedsShift = true\n'
+  printf '\tswitchDelay = 300\n'
   printf '\tswitchCorners = none\n'
   printf '\tswitchCornerSize = 0\n'
   echo "end"
