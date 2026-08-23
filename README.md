@@ -74,8 +74,8 @@ Edit `~/.config/Deskflow/deskflow-server.conf`, then
 
 | Option | Meaning |
 |---|---|
-| `switchDelay = 300` | cursor must dwell at the edge this many ms before switching. `0` = instant slam |
-| `switchDoubleTap = 250` | must tap the edge twice quickly instead of dwelling |
+| `switchDoubleTap = 250` | **default**: cursor must slam the edge twice within 250ms to switch — prevents accidental crossings |
+| `switchDelay = 300` | alternative: dwell at the edge this many ms before switching (`0` = instant) |
 | `switchNeedsShift = true` | only switch while holding Shift (also `Ctrl` / `Alt`) |
 | `switchCorners` / `switchCornerSize` | dead-zone screen corners so they never trigger |
 
