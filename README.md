@@ -90,11 +90,10 @@ section: links
 end
 ```
 
-Keyboard-only switching (no edge crossing at all):
-```ini
-switchDoubleTap = -1          # effectively disable edge switching
-keystroke(super+shift+right) = switchInDirection(right)
-```
+Keyboard-only switching (`switchInDirection`): works on X11 only. On GNOME
+Wayland/libei Deskflow can't observe keys while the cursor is on the primary
+screen, so hotkeys never fire there — verified empirically. Stick with edge
+dwell on Wayland.
 
 Handy keys:
 - `Super+A` — lock/unlock cursor to current screen (panic key, set up by these scripts)
